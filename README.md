@@ -1,5 +1,4 @@
 # PriceScout - Smart Product Price Tracker
-### Watch here - https://youtu.be/HakXg-hFZ_c
 
 Track product prices across e-commerce sites and get alerts on price drops. Built with Next.js, Firecrawl, and Supabase.
 
@@ -44,8 +43,8 @@ Before you begin, ensure you have:
 ### 1. Clone and Install
 
 ```bash
-git clone https://github.com/piyush-eon/smart-product-price-tracker.git
-cd smart-product-price-tracker
+git clone https://github.com/dev-akhilesh/Price-Scout.git
+cd Price-Scout
 npm install
 ```
 
@@ -305,19 +304,6 @@ Open [http://localhost:3000](http://localhost:3000)
 4. **Updates database** - Saves new prices and adds to history if changed
 5. **Sends email alerts** - Notifies users via Resend when prices drop
 
-### Why Firecrawl?
-
-Firecrawl solves the hard problems of web scraping:
-
-- ✅ **JavaScript Rendering** - Handles dynamic content loaded via JS
-- ✅ **Anti-bot Bypass** - Built-in mechanisms to avoid detection
-- ✅ **Rotating Proxies** - Prevents IP blocking
-- ✅ **AI-Powered Extraction** - Uses prompts to extract structured data
-- ✅ **Multi-site Support** - Same code works across different e-commerce platforms
-- ✅ **Fast & Reliable** - Built for production use
-
-No need to maintain brittle, site-specific scrapers!
-
 ## 📁 Project Structure
 
 ```
@@ -347,13 +333,11 @@ pricescout/
 │       ├── client.js                   # Browser Supabase client
 │       ├── server.js                   # Server Supabase client
 │       └── middleware.js               # Session refresh middleware
-├── supabase/
-│   └── migrations/
-│       ├── 001_schema.sql              # Database tables & RLS
-│       └── 002_setup_cron.sql          # Cron job setup
-├── proxy.ts                            # Next.js 15 proxy (replaces middleware)
+├── proxy.js                            # Next.js proxy (replaces middleware)
 └── .env.local                          # Environment variables
 ```
+
+The database schema and cron job SQL (shown above under Setup Instructions) are applied by hand in the Supabase SQL editor — they aren't tracked as migration files in this repo.
 
 ## 🧪 Testing
 
@@ -438,20 +422,6 @@ prompt: "Extract product name, price, currency, image URL, brand, rating, and av
 - Verify the function URL and Authorization header are correct
 - Check Supabase logs for errors
 
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ---
 
-Built with ❤️ by RoadsideCoder using Next.js, Firecrawl, and Supabase
+Built with ❤️ using Next.js, Firecrawl, and Supabase
